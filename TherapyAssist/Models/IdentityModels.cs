@@ -18,8 +18,15 @@ namespace TherapyAssist.Models
         }
     }
 
+   
+
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Exercise> Exercises { get; set; }
+        public DbSet<ExerciseType> ExerciseTypes { get; set; }
+        public DbSet<ExerciseInterval> ExerciseIntervals { get; set; }
+        public DbSet<Equipment> Equipment { get; set; }
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
