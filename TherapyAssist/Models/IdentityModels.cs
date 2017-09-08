@@ -26,6 +26,7 @@ namespace TherapyAssist.Models
         public DbSet<ExerciseType> ExerciseTypes { get; set; }
         public DbSet<ExerciseInterval> ExerciseIntervals { get; set; }
         public DbSet<Equipment> Equipment { get; set; }
+        public DbSet<UserDetail> UserDetail { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
