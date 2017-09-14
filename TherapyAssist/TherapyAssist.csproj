@@ -226,15 +226,27 @@
     <Compile Include="Migrations\201709080336557_UserDetail.Designer.cs">
       <DependentUpon>201709080336557_UserDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709110304152_patientclasses.cs" />
+    <Compile Include="Migrations\201709110304152_patientclasses.Designer.cs">
+      <DependentUpon>201709110304152_patientclasses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709120318109_navprops.cs" />
+    <Compile Include="Migrations\201709120318109_navprops.Designer.cs">
+      <DependentUpon>201709120318109_navprops.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\DailyLog.cs" />
     <Compile Include="Models\Equipment.cs" />
     <Compile Include="Models\Exercise.cs" />
     <Compile Include="Models\ExerciseInterval.cs" />
     <Compile Include="Models\ExerciseType.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Patient.cs" />
+    <Compile Include="Models\Therapist.cs" />
     <Compile Include="Models\UserDetail.cs" />
+    <Compile Include="Models\PatientExercise.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -326,6 +338,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709080336557_UserDetail.resx">
       <DependentUpon>201709080336557_UserDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709110304152_patientclasses.resx">
+      <DependentUpon>201709110304152_patientclasses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709120318109_navprops.resx">
+      <DependentUpon>201709120318109_navprops.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

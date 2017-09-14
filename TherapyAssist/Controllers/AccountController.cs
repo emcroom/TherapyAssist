@@ -149,12 +149,26 @@ namespace TherapyAssist.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Register(RegisterViewModel model)
         {
+            ApplicationDbContext db = new ApplicationDbContext();
             if (ModelState.IsValid)
             {
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
                 var result = await UserManager.CreateAsync(user, model.Password);
+                
                 if (result.Succeeded)
                 {
+                    user = db.Users.Where(x => x.Email == model.Email).First();
+                    var userDetail = new UserDetail
+                    {
+                        FirstName = model.FirstName,
+                        LastName = model.LastName,
+                        isPatient = model.isPatient,
+                        isTherapist = model.isTherapist,
+                        User = user,
+                        UserId = user.Id
+                    };
+                    db.UserDetail.Add(userDetail);
+                    await db.SaveChangesAsync();
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771

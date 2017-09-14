@@ -27,6 +27,10 @@ namespace TherapyAssist.Models
         public DbSet<ExerciseInterval> ExerciseIntervals { get; set; }
         public DbSet<Equipment> Equipment { get; set; }
         public DbSet<UserDetail> UserDetail { get; set; }
+        public DbSet<DailyLog> DailyLog { get; set; }
+        public DbSet<Patient> Patient { get; set; }
+        public DbSet<PatientExercise> PatientExercise { get; set; }
+        public DbSet<Therapist> Therapist { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
