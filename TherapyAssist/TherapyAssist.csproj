@@ -196,6 +196,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ExercisesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PatientExercisesController.cs" />
@@ -317,6 +318,11 @@
     <Content Include="Views\PatientExercises\Details.cshtml" />
     <Content Include="Views\PatientExercises\Edit.cshtml" />
     <Content Include="Views\PatientExercises\Index.cshtml" />
+    <Content Include="Views\Exercises\Create.cshtml" />
+    <Content Include="Views\Exercises\Delete.cshtml" />
+    <Content Include="Views\Exercises\Details.cshtml" />
+    <Content Include="Views\Exercises\Edit.cshtml" />
+    <Content Include="Views\Exercises\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
