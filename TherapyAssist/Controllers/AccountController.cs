@@ -190,16 +190,7 @@ namespace TherapyAssist.Controllers
                         };
                         db.Therapist.Add(therapist);
                     }
-                    //var userDetail = new UserDetail
-                    //{
-                    //    FirstName = model.FirstName,
-                    //    LastName = model.LastName,
-                    //    isPatient = model.isPatient,
-                    //    isTherapist = model.isTherapist,
-                    //    User = user,
-                    //    UserId = user.Id
-                    //};
-                    //db.UserDetail.Add(userDetail);
+                    
                     await db.SaveChangesAsync();
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     
