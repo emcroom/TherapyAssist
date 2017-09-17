@@ -1,0 +1,83 @@
+﻿@model TherapyAssist.Models.ExerciseInterval
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ExerciseInterval</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.exercise.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.exercise.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientExercise_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PatientExercise_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Repetitions)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Repetitions)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimesPerDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimesPerDay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedBy)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ExerciseInterval_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

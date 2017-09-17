@@ -196,6 +196,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ExerciseIntervalsController.cs" />
     <Compile Include="Controllers\ExercisesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -323,6 +324,11 @@
     <Content Include="Views\Exercises\Details.cshtml" />
     <Content Include="Views\Exercises\Edit.cshtml" />
     <Content Include="Views\Exercises\Index.cshtml" />
+    <Content Include="Views\ExerciseIntervals\Create.cshtml" />
+    <Content Include="Views\ExerciseIntervals\Delete.cshtml" />
+    <Content Include="Views\ExerciseIntervals\Details.cshtml" />
+    <Content Include="Views\ExerciseIntervals\Edit.cshtml" />
+    <Content Include="Views\ExerciseIntervals\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
