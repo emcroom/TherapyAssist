@@ -29,12 +29,40 @@
             @Html.CheckBoxFor(m => m.isPatient, new { @class = "form-control" })
         </div>
     </div>
+    //-----------Patient Details-----------
+    <div class="form-group">
+        @Html.LabelFor(m => m.isPhysicalTherapy, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.CheckBoxFor(m => m.isPhysicalTherapy, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.isOccupationalTherapy, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.CheckBoxFor(m => m.isOccupationalTherapy, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.isSpeechTherapy, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.CheckBoxFor(m => m.isSpeechTherapy, new { @class = "form-control" })
+        </div>
+    </div>
+    //-----------End Pateint Details-----------
     <div class="form-group">
         @Html.LabelFor(m => m.isTherapist, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
             @Html.CheckBoxFor(m => m.isTherapist, new { @class = "form-control" })
         </div>
     </div>
+    //-----------Therapist Details-----------
+    <div class="form-group">
+        @Html.LabelFor(m => m.MedicalInstitutionName, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.MedicalInstitutionName, new { @class = "form-control" })
+        </div>
+    </div>
+    //-----------End Therapist Details-----------
     <div class="form-group">
         @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">

@@ -158,16 +158,48 @@ namespace TherapyAssist.Controllers
                 if (result.Succeeded)
                 {
                     user = db.Users.Where(x => x.Email == model.Email).First();
-                    var userDetail = new UserDetail
+                    if (model.isPatient)
                     {
-                        FirstName = model.FirstName,
-                        LastName = model.LastName,
-                        isPatient = model.isPatient,
-                        isTherapist = model.isTherapist,
-                        User = user,
-                        UserId = user.Id
-                    };
-                    db.UserDetail.Add(userDetail);
+                        var patient = new Patient
+                        {
+                            FirstName = model.FirstName,
+                            LastName = model.LastName,
+                            isPatient = model.isPatient,
+                            isTherapist = model.isTherapist,
+                            isOccupationalTherapy = model.isOccupationalTherapy,
+                            isPhysicalTherapy = model.isPhysicalTherapy,
+                            isSpeechTherapy = model.isSpeechTherapy,
+                            User = user,
+                            UserId = user.Id,
+                             
+                        };
+                        db.Patient.Add(patient);
+                    }
+                    if (model.isTherapist)
+                    {
+                        var therapist = new Therapist
+                        {
+                            FirstName = model.FirstName,
+                            LastName = model.LastName,
+                            isPatient = model.isPatient,
+                            isTherapist = model.isTherapist,
+                            MedicalInstitutionName = model.MedicalInstitutionName,
+                            User = user,
+                            UserId = user.Id,
+
+                        };
+                        db.Therapist.Add(therapist);
+                    }
+                    //var userDetail = new UserDetail
+                    //{
+                    //    FirstName = model.FirstName,
+                    //    LastName = model.LastName,
+                    //    isPatient = model.isPatient,
+                    //    isTherapist = model.isTherapist,
+                    //    User = user,
+                    //    UserId = user.Id
+                    //};
+                    //db.UserDetail.Add(userDetail);
                     await db.SaveChangesAsync();
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     

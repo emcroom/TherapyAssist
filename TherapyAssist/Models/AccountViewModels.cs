@@ -92,6 +92,16 @@ namespace TherapyAssist.Models
         [Required]
         [Display(Name = "Therapist")]
         public bool isTherapist { get; set; }
+
+        [Display(Name = "Physical Therapy")]
+        public bool isPhysicalTherapy { get; set; }
+        [Display(Name = "Occupational Therapy")]
+        public bool isOccupationalTherapy { get; set; }
+        [Display(Name = "Speech Therapy")]
+        public bool isSpeechTherapy { get; set; }
+
+        [Display(Name = "Medical Institution Name")]
+        public string MedicalInstitutionName { get; set; }
     }
 
     public class ResetPasswordViewModel

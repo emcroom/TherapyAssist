@@ -11,8 +11,8 @@ namespace TherapyAssist.Models
         [Key]
         public int PatientExercise_ID { get; set; }
 
-        public int Exercise_ID { get; set; }
-        public virtual Exercise Exercise { get; set; }
+        public int ExerciseInterval_ID { get; set; }
+        public virtual ExerciseInterval ExerciseInterval { get; set; }
 
         public int Patient_ID { get; set; }
         public virtual Patient Patient { get; set; }

@@ -198,7 +198,6 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="DAL\TherapyAssistContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -226,13 +225,17 @@
     <Compile Include="Migrations\201709080336557_UserDetail.Designer.cs">
       <DependentUpon>201709080336557_UserDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201709110304152_patientclasses.cs" />
-    <Compile Include="Migrations\201709110304152_patientclasses.Designer.cs">
-      <DependentUpon>201709110304152_patientclasses.cs</DependentUpon>
+    <Compile Include="Migrations\201709170508139_newclasses1.cs" />
+    <Compile Include="Migrations\201709170508139_newclasses1.Designer.cs">
+      <DependentUpon>201709170508139_newclasses1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201709120318109_navprops.cs" />
-    <Compile Include="Migrations\201709120318109_navprops.Designer.cs">
-      <DependentUpon>201709120318109_navprops.cs</DependentUpon>
+    <Compile Include="Migrations\201709170515402_newclassesUpdate.cs" />
+    <Compile Include="Migrations\201709170515402_newclassesUpdate.Designer.cs">
+      <DependentUpon>201709170515402_newclassesUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709170533493_newclassesUpdate2.cs" />
+    <Compile Include="Migrations\201709170533493_newclassesUpdate2.Designer.cs">
+      <DependentUpon>201709170533493_newclassesUpdate2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -311,6 +314,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="DAL\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -339,11 +343,14 @@
     <EmbeddedResource Include="Migrations\201709080336557_UserDetail.resx">
       <DependentUpon>201709080336557_UserDetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201709110304152_patientclasses.resx">
-      <DependentUpon>201709110304152_patientclasses.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201709170508139_newclasses1.resx">
+      <DependentUpon>201709170508139_newclasses1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201709120318109_navprops.resx">
-      <DependentUpon>201709120318109_navprops.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201709170515402_newclassesUpdate.resx">
+      <DependentUpon>201709170515402_newclassesUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709170533493_newclassesUpdate2.resx">
+      <DependentUpon>201709170533493_newclassesUpdate2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

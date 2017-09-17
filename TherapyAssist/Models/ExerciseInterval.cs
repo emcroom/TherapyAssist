@@ -11,6 +11,8 @@ namespace TherapyAssist.Models
         [Key]
         public int ExerciseInterval_ID { get; set; }
 
+        public int PatientExercise_ID { get; set; }
+
         [Display(Name = "Repetitions")]
         public int Repetitions { get; set; }
         [Display(Name = "Times Per day")]

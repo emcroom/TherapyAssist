@@ -7,13 +7,13 @@ namespace TherapyAssist.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class navprops : IMigrationMetadata
+    public sealed partial class newclassesUpdate2 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(navprops));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(newclassesUpdate2));
         
         string IMigrationMetadata.Id
         {
-            get { return "201709120318109_navprops"; }
+            get { return "201709170533493_newclassesUpdate2"; }
         }
         
         string IMigrationMetadata.Source
