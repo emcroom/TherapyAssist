@@ -1,0 +1,76 @@
+﻿@model IEnumerable<TherapyAssist.Models.PatientExercise>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ExerciseInterval.CreatedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Patient_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.isComplete)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CompletedDateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModifiedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModifiedBy)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExerciseInterval.CreatedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Patient_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.isComplete)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompletedDateTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModifiedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModifiedBy)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PatientExercise_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PatientExercise_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PatientExercise_ID })
+        </td>
+    </tr>
+}
+
+</table>
