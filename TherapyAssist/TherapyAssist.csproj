@@ -196,8 +196,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\DailyLogsController.cs" />
     <Compile Include="Controllers\ExerciseIntervalsController.cs" />
     <Compile Include="Controllers\ExercisesController.cs" />
+    <Compile Include="Controllers\ExerciseTypesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PatientExercisesController.cs" />
@@ -239,6 +241,10 @@
     <Compile Include="Migrations\201709170533493_newclassesUpdate2.cs" />
     <Compile Include="Migrations\201709170533493_newclassesUpdate2.Designer.cs">
       <DependentUpon>201709170533493_newclassesUpdate2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709180355098_intervalNotes.cs" />
+    <Compile Include="Migrations\201709180355098_intervalNotes.Designer.cs">
+      <DependentUpon>201709180355098_intervalNotes.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -329,6 +335,16 @@
     <Content Include="Views\ExerciseIntervals\Details.cshtml" />
     <Content Include="Views\ExerciseIntervals\Edit.cshtml" />
     <Content Include="Views\ExerciseIntervals\Index.cshtml" />
+    <Content Include="Views\ExerciseTypes\Create.cshtml" />
+    <Content Include="Views\ExerciseTypes\Delete.cshtml" />
+    <Content Include="Views\ExerciseTypes\Details.cshtml" />
+    <Content Include="Views\ExerciseTypes\Edit.cshtml" />
+    <Content Include="Views\ExerciseTypes\Index.cshtml" />
+    <Content Include="Views\DailyLogs\Create.cshtml" />
+    <Content Include="Views\DailyLogs\Delete.cshtml" />
+    <Content Include="Views\DailyLogs\Details.cshtml" />
+    <Content Include="Views\DailyLogs\Edit.cshtml" />
+    <Content Include="Views\DailyLogs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -369,6 +385,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709170533493_newclassesUpdate2.resx">
       <DependentUpon>201709170533493_newclassesUpdate2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709180355098_intervalNotes.resx">
+      <DependentUpon>201709180355098_intervalNotes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

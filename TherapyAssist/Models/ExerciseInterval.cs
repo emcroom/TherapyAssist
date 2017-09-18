@@ -17,6 +17,7 @@ namespace TherapyAssist.Models
         public int Repetitions { get; set; }
         [Display(Name = "Times Per day")]
         public int TimesPerDay { get; set; }
+        public string Notes { get; set; }
 
         public int Exercise_ID { get; set; }
         public virtual Exercise exercise { get; set; }
