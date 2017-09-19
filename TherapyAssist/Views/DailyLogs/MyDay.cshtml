@@ -1,0 +1,27 @@
+﻿@model TherapyAssist.Models.DailyLog
+
+@{
+    ViewBag.Title = "My Day";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="banner">
+    <h3>My Day</h3>@Html.DisplayFor(model => model.MyDate)
+
+</div>
+
+<div>
+    <h4>DailyLog</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        
+        @foreach (var item in Model.Patient.PatientExercises.Where(x=>x.ExerciseInterval.exercise.Type.Name == "abe"))
+        {
+
+        }
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DailyLog_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

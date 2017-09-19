@@ -246,6 +246,14 @@
     <Compile Include="Migrations\201709180355098_intervalNotes.Designer.cs">
       <DependentUpon>201709180355098_intervalNotes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709190230487_dailylogupdate.cs" />
+    <Compile Include="Migrations\201709190230487_dailylogupdate.Designer.cs">
+      <DependentUpon>201709190230487_dailylogupdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709190308016_dailylogupdate2.cs" />
+    <Compile Include="Migrations\201709190308016_dailylogupdate2.Designer.cs">
+      <DependentUpon>201709190308016_dailylogupdate2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\DailyLog.cs" />
@@ -261,6 +269,7 @@
     <Compile Include="Models\PatientExercise.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\MyDayViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -345,6 +354,7 @@
     <Content Include="Views\DailyLogs\Details.cshtml" />
     <Content Include="Views\DailyLogs\Edit.cshtml" />
     <Content Include="Views\DailyLogs\Index.cshtml" />
+    <Content Include="Views\DailyLogs\MyDay.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -388,6 +398,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709180355098_intervalNotes.resx">
       <DependentUpon>201709180355098_intervalNotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709190230487_dailylogupdate.resx">
+      <DependentUpon>201709190230487_dailylogupdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709190308016_dailylogupdate2.resx">
+      <DependentUpon>201709190308016_dailylogupdate2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

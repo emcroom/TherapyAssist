@@ -21,8 +21,35 @@ namespace TherapyAssist.Controllers
         {
             var patient = db.Patient.Where(x => x.UserId == User.Identity.GetUserId()).First();
             //patient.
-            var dailyLog = db.DailyLog.Include(d => d.UserDetail);
+            var dailyLog = db.DailyLog.Include(d => d.Patient).Where(x=>x.User_ID == patient.User_ID);
             return View(await dailyLog.ToListAsync());
+        }
+
+        public ActionResult MyDay()
+        {
+            return MyDay(DateTime.Now.Date);
+        }
+
+        public ActionResult MyDay(DateTime date)
+        {
+            var patient = db.Patient.Where(x => x.UserId == User.Identity.GetUserId()).First();
+            //patient.
+            var dailyLog =  db.DailyLog.Include(d => d.Patient).Where(x => x.User_ID == patient.User_ID && x.MyDate.Date == date.Date).Single();
+            if (dailyLog == null)
+            {
+                dailyLog = new DailyLog
+                {
+                    Patient = patient,
+                    CreatedBy = patient.User_ID,
+                    CreatedDate = DateTime.Now,
+                    MyDate = date,
+                    ModifiedBy = patient.User_ID,
+                    ModifiedDate = DateTime.Now
+
+                };
+            }
+            return View(dailyLog);
+            
         }
 
         // GET: DailyLogs/Details/5

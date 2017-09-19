@@ -10,17 +10,14 @@ namespace TherapyAssist.Models
     {
         [Key]
         public int DailyLog_ID { get; set; }
-
+        public DateTime MyDate { get; set; }
         public int User_ID { get; set; }
-        public virtual UserDetail UserDetail { get; set; }
-
-        public virtual List<ExerciseInterval> Exercises { get; set; }
-
+        public virtual Patient Patient { get; set; }
 
         public DateTime CreatedDate { get; set; }
-        public string CreatedBy { get; set; }
+        public int CreatedBy { get; set; }
         public DateTime ModifiedDate { get; set; }
-        public string ModifiedBy { get; set; }
+        public int ModifiedBy { get; set; }
 
     }
 }
